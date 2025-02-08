@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassicalEncryptor.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+       
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+               Text="Indique que sistema de cifrado desea emplear"
+               FontAttributes="Bold,Italic"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               FontSize="36"/>
+       
+        <Button Grid.Row="1" Grid.Column="0"
+                x:Name="CaesarButton"
+                Text="Cifrado César"
+                FontAttributes="Bold"
+                FontSize="32"
+                Clicked="CaesarButton_OnClicked"/>
+       
+        <Button Grid.Row="1" Grid.Column="1"
+                x:Name="VigenèreButton"
+                Text="Cifrado Vigenère"
+                FontAttributes="Bold"
+                FontSize="32"/>
+    </Grid>
+
+</ContentPage>
